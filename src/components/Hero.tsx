@@ -37,11 +37,10 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
             <h1 className="font-semibold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6 tracking-tight">
-              Expert <span className="text-accent font-bold">Chartered Accountant</span> Services in India
+              Expert <span className="text-accent font-bold">Chartered Accountant</span> Services 
             </h1>
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Comprehensive financial solutions for your business growth. From tax planning to audit services,
-              we ensure compliance and maximize your financial potential.
+              Expert advice and tailored solutions to drive financial success and navigate complex regulatory landscapes with confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">

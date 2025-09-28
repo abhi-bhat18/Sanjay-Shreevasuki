@@ -25,11 +25,11 @@ const Footer = () => {
             <div className="space-y-2 text-sm">
               <div className="flex items-center">
                 <MapPin className="h-4 w-4 mr-2 text-accent" />
-                <span>Mumbai, Maharashtra</span>
+                <span>3/4-1, 3rd floor, Isiri, 6th Cross Amarjyothinagar Nagarabhavi Road, Raghavendra Swamy mutt road, Bangalore</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-accent" />
-                <span>+91 98765 43210</span>
+                <span>+91 7022914593</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-accent" />
@@ -98,12 +98,8 @@ const Footer = () => {
             </h4>
             <div className="space-y-2 text-sm text-primary-foreground/80">
               <div>
-                <p className="font-medium">Monday - Friday</p>
-                <p>9:00 AM - 6:00 PM</p>
-              </div>
-              <div>
-                <p className="font-medium">Saturday</p>
-                <p>9:00 AM - 1:00 PM</p>
+                <p className="font-medium">Monday - Saturday</p>
+                <p>10:00 AM - 6:00 PM</p>
               </div>
               <div>
                 <p className="font-medium">Sunday</p>

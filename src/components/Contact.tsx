@@ -23,17 +23,48 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    toast({
-      title: "Message Sent Successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message Sent Successfully!",
+          description: data.message || "We'll get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: data.error || "Failed to send message. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Error",
+        description: "Network error. Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -68,10 +99,10 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  123 Business District,<br />
-                  Financial Center,<br />
-                  Mumbai, Maharashtra 400001<br />
-                  India
+                  3/4-1, 3rd floor, Isiri,<br />
+                  6th Cross Amarjyothinagar Nagarabhavi Road,<br />
+                  Raghavendra Swamy mutt road,<br />
+                  Bangalore, Karnataka
                 </p>
               </CardContent>
             </Card>
@@ -85,15 +116,15 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="space-y-2">
                 <div>
-                  <p className="text-sm font-medium">Main Office:</p>
-                  <a href="tel:+912234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 22 3456 7890
+                  <p className="text-sm font-medium">Mobile:</p>
+                  <a href="tel:+917022914593" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91 7022914593
                   </a>
                 </div>
                 <div>
                   <p className="text-sm font-medium">Mobile:</p>
-                  <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
-                    +91 98765 43210
+                  <a href="tel:+918861317885" className="text-muted-foreground hover:text-primary transition-colors">
+                    +91 8861317885
                   </a>
                 </div>
               </CardContent>
@@ -131,8 +162,7 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-1 text-muted-foreground">
-                  <p><span className="font-medium">Monday - Friday:</span> 9:00 AM - 6:00 PM</p>
-                  <p><span className="font-medium">Saturday:</span> 9:00 AM - 1:00 PM</p>
+                  <p><span className="font-medium">Monday - Saturday:</span> 10:00 AM - 6:00 PM</p>
                   <p><span className="font-medium">Sunday:</span> Closed</p>
                 </div>
               </CardContent>
@@ -233,11 +263,12 @@ const Contact = () => {
 
                   <Button 
                     type="submit"
-                    className="w-full bg-gradient-primary hover:shadow-professional transition-all duration-300 py-3"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-primary hover:shadow-professional transition-all duration-300 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
                     size="lg"
                   >
                     <Send className="h-4 w-4 mr-2" />
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
               </CardContent>
@@ -257,11 +288,11 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="tel:+919876543210"
+                href="tel:+917022914593"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-3 rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300 inline-flex items-center justify-center"
               >
                 <Phone className="h-4 w-4 mr-2" />
-                Call Now: +91 98765 43210
+                Call Now: +91 7022914593
               </a>
               <a 
                 href="mailto:consult@caprofessional.com"

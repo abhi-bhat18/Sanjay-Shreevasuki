@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# Sanjay and Shreevasuki Associates - CA Firm Website
 
-## Project info
+A professional website for Sanjay and Shreevasuki Associates, a chartered accountant firm providing comprehensive financial solutions for businesses across India.
 
-**URL**: https://lovable.dev/projects/8653905f-3558-4d99-bed8-a609e7930046
+## About the Firm
 
-## How can I edit this code?
+Sanjay and Shreevasuki Associates is a leading chartered accountant firm established with a vision to provide comprehensive financial solutions. Our team of qualified chartered accountants brings decades of combined experience in:
 
-There are several ways of editing your application.
+- Tax Planning & Corporate Advisory
+- Audit & Assurance Services
+- GST Registration & Filing
+- Business Advisory & Consulting
+- Compliance Management
 
-**Use Lovable**
+## Website Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/8653905f-3558-4d99-bed8-a609e7930046) and start prompting.
+- **Professional Design**: Modern, responsive design optimized for all devices
+- **Service Showcase**: Comprehensive display of CA services and expertise
+- **Team Profiles**: Detailed information about our qualified professionals
+- **Contact Integration**: Easy-to-use contact forms and communication channels
+- **Performance Optimized**: Built with Next.js for fast loading and SEO optimization
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technology Stack
 
-**Use your preferred IDE**
+This website is built with modern web technologies:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Shadcn/ui** - Beautiful, accessible UI components
+- **React Query** - Data fetching and state management
+- **Lucide React** - Modern icon library
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Development Setup
 
-Follow these steps:
+To run this project locally:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Home page
+│   ├── not-found.tsx      # 404 page
+│   └── globals.css        # Global styles
+├── src/
+│   ├── components/        # React components
+│   │   ├── ui/           # Reusable UI components
+│   │   ├── Header.tsx    # Navigation header
+│   │   ├── Hero.tsx      # Hero section
+│   │   ├── Services.tsx  # Services showcase
+│   │   ├── Team.tsx      # Team members
+│   │   ├── Contact.tsx   # Contact form
+│   │   └── Footer.tsx    # Site footer
+│   ├── assets/           # Images and static assets
+│   ├── hooks/            # Custom React hooks
+│   └── lib/              # Utility functions
+└── public/               # Static files
+```
 
-**Use GitHub Codespaces**
+## Contact Information
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Sanjay and Shreevasuki Associates**
+- Email: info@caprofessional.com
+- Phone: +91 98765 43210
+- Services: Chartered Accountant Services, Tax Planning, Audit & Assurance
 
-## What technologies are used for this project?
+---
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/8653905f-3558-4d99-bed8-a609e7930046) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+*Built with ❤️ for Sanjay and Shreevasuki Associates*

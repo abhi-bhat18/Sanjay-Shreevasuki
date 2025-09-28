@@ -7,28 +7,30 @@ import teamMember2 from "@/assets/team-member-2.jpg";
 const Team = () => {
   const teamMembers = [
     {
-      name: "CA Sanjay Ganapati Hegde",
-      designation: "Founding Partner & Senior CA",
-      experience: "15+ Years",
+      name: "CA Sanjay Hegde",
+      designation: "Founding Partner",
+      experience: "4+ Years",
       specialization: "Tax Planning & Corporate Advisory",
       image: teamMember1,
-      qualifications: ["CA", "CPA", "MBA Finance"],
-      email: "rajesh@caprofessional.com",
-      phone: "+91 98765 43210",
-      description: "Expert in tax optimization strategies and corporate restructuring with extensive experience in handling complex financial matters for large enterprises."
+      qualifications: ["CA", "B.Com"],
+      email: "sanjay@sanjayandshreevasuki.com",
+      phone: "+91 7022914593",
+      description: "A Chartered Accountant qualified in 2022 with 3+ years of articleship and 2+ years of post-qualification experience. Specializes in hotel and construction industries, bringing unique insights from both employee and partner perspectives to deliver tailored solutions for complex client challenges."
     },
     {
-      name: "CA Shree Vasuki ",
-      designation: "Founding Partner & Audit Head",
-      experience: "12+ Years",
+      name: "CA Shreevasuki KS ",
+      designation: "Founding Partner",
+      experience: "4+ Years",
       specialization: "Audit & Assurance Services",
       image: teamMember2,
-      qualifications: ["CA", "DISA", "LLB"],
-      email: "priya@caprofessional.com",
-      phone: "+91 98765 43211",
-      description: "Specialized in statutory audits and compliance management with a proven track record in risk assessment and internal control systems."
+      qualifications: ["CA", "B.Com"],
+      email: "shreevasuki@sanjayandshreevasuki.com",
+      phone: "+91 8861317885",
+      description: "A Chartered Accountant qualified in 2022 with 2+ years of post-qualification experience at PwC and 3+ years of articleship. Brings diverse experience from both large and mid-sized firms, specializing in statutory audits, taxation, and advisory services with deep client-facing exposure to deliver tailored solutions."
     }
   ];
+
+
 
   return (
     <section id="team" className="py-20 bg-background">

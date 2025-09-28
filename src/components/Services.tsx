@@ -104,25 +104,6 @@ const Services = () => {
             </Card>
           ))}
         </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-primary rounded-2xl p-8 text-center">
-            <h3 className="font-heading font-semibold text-2xl text-primary-foreground mb-4">
-              Need Expert Financial Guidance?
-            </h3>
-            <p className="text-primary-foreground/90 mb-6 max-w-2xl mx-auto">
-              Our team of qualified chartered accountants is ready to help your business achieve financial success 
-              and regulatory compliance.
-            </p>
-            <button 
-              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-3 rounded-lg shadow-elegant hover:shadow-hover transition-all duration-300"
-            >
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );
